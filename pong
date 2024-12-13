@@ -1,0 +1,41 @@
+# Import the pygame library and initialise the game engine
+import pygame
+pygame.init()
+
+#Open a new window, caption it "Pong"
+screen = pygame.display.set_mode((700,500))
+pygame.display.set_caption("Pong")
+
+# here's the variable that runs our game loop
+doExit = False
+
+
+# The clock will be used to control how fast the screen updates
+clock = pygame.time.Clock()
+
+while not doExit: #GAME LOOP---------------------------------
+
+    # event queue stuff---------------------------
+    clock.tick(60) #set the FPS
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            doExit = True
+            
+        #game logic-------------------------------------------
+        
+    
+    
+    
+#render section-------------------------------------------
+screen.fill((0,0,0))
+
+
+pygame.draw.line(screen, (255, 255, 255,), [349, 0], [349, 500], 5)
+
+
+pygame.display.flip()
+
+#END GAME LOOP----------------------------
+            
+pygame.quit()
